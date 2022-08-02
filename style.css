@@ -3,7 +3,7 @@
 
 #abt{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 /* body{
     background-image: linear-gradient(to bottom,#faf8f8,rgb(157, 157, 179));
@@ -25,7 +25,7 @@
 
 .about-image img{
     height: 640px;
-    width: 90%;
+    width: 100%;
     object-fit: contain;
 }
 #crd{
@@ -42,8 +42,8 @@
 }
 .skill-head {
     text-align: center;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .skill-items .progress {
@@ -84,10 +84,10 @@
     content: "\f08c";
 }
 #contact-icon {
-    width: 15%;
-    font-size: 1.4vw;
+    width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 #contact-icon div a {
     text-decoration: none;
@@ -104,10 +104,10 @@
     border-color: var(--bs-btn-hover-border-color);
 }
 #sk{
-    margin-top: 10rem;
+    margin-top: 7rem;
 }
 #edc{
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 #footer {
     color: white;
@@ -133,4 +133,5 @@
 }
 #copyright{
    text-align: center;
+   color: gray;
 }
