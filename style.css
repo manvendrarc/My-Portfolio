@@ -1,80 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
 
-#abt{
+#abt .row {
     display: flex;
     flex-wrap: wrap;
-}
-/* body{
-    background-image: linear-gradient(to bottom,#faf8f8,rgb(157, 157, 179));
-} */
-
-
-.about-me
-{
-   margin-top:100px;
-   margin-left:20px;
+  }
   
-}
-
+  .col-lg-6,
+  .col-md-6 {
+    flex-basis: 50%;
+    display: flex;
+  align-items: center;
+  }
+  
+  .col {
+    margin-bottom: 2rem;
+  }
+  
 .about-image{
-    height:600px;
     position:relative ;
-    top: -50px;
-}
+} 
 
 .about-image img{
-    height: 640px;
+    height: 100%;
     width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
     object-fit: contain;
-}
-#crd{
-    justify-content: center;
     
-}
+} 
     
 
-.col{
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    
+.about-me-text p {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    text-align: justify;
+  }
+.about {
+    margin-top: 100px;
 }
-.skill-head {
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-.skill-items .progress {
-    margin-top: 26px;
-    position: relative;
-    overflow: hidden;
-    height: 4px;
-    border: 4px;
-    box-shadow: none;
-    background-color: white;
-}
-.card {
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: all .2s ease-in-out;
-
-}
-.card-main{
-    transition: all .2s ease-in-out;
-}
-.card-main:hover { 
-    transform: scale(1.1); 
+.about-me{
+    margin: auto;
 }
 .about-me-text {
     overflow: hidden;
+    
       border-right: .15em solid orange;
       white-space: nowrap;
       animation: 
-      typing 1.5s steps(20, end) forwards;
-      font-size: 1.6rem;
-      width: 0;
+      typing 2s steps(40, end) forwards;
+      max-width: 335px;
   }
   @keyframes typing {
     from { width: 0 }
@@ -93,28 +69,41 @@
     text-decoration: none;
     color: gray;
 }
-#hire-btn a:nth-child(2) {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2vw;
-}
-.btn:hover {
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
-}
-#sk{
-    margin-top: 7rem;
-}
-#edc{
-    margin-top: 10rem;
-}
+/* resume button div */
+ #resume-butn{
+    
+    position: relative;
+    
+    /* top:50%; */
+    /* width: 9%; */
+    /* left: 2%; */
+   } 
+   #resume-tag{
+       text-decoration: none;
+       color:black ;
+   }
+   #resume-butn button:hover a{
+       color:white;
+   }
+   
+   resume button  */
+   #resume-butn button{
+
+       padding: 4%;
+       margin-left: 1px;
+       letter-spacing: 1px;
+       width:100%;
+       font-size: 1.1vw;
+   }
+    
+
+
 #footer {
     color: white;
     background-color: black;
     font-family: var(--font);
     padding: 2em;
-    margin-top: 20rem;
+    margin-top: 50px;
 }
 #follow{
 
@@ -134,3 +123,111 @@
    text-align: center;
    color: gray;
 }
+
+@media (max-width: 768px) {
+    .about-me-text p {
+      font-size: 1rem; 
+      line-height: 1.5; 
+    }
+    .about-image img {
+      
+      width: auto;
+      
+    }
+  }
+
+
+.Education{
+    width: 100%;
+    
+
+}
+.section-heading{
+    
+    font-weight: 600;
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+/* education cards */
+#education-cards{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:2rem;
+}
+
+.edu-cards {
+    flex: 0 0 calc(20% - 20px);
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 20px 1px;
+    transition: 0.5s transform ease;
+  }
+.edu-cards:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    
+}
+.edu-cards .card-img{
+    height: 50%;
+    padding-top:7%;
+    
+}
+
+.edu-cards .card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.edu-cards .card-content{
+    padding: 7%;
+    text-align: center;
+}
+
+.edu-cards .card-content h5{
+    font-size: 1.2em;
+    font-weight: 800;
+
+}
+.edu-cards .card-detail p{
+    margin-bottom: 0.5rem;
+}
+.section-heading {
+    font-weight: 600;
+    text-align: center;
+    font-size: 2vw;
+  }
+  
+/* Responsive styles for education cards */
+@media (max-width: 1200px) {
+    .edu-cards {
+      flex: 0 0 calc(25% - 20px);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .edu-cards {
+      flex: 0 0 calc(33.3333% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .edu-cards {
+      flex: 0 0 calc(50% - 20px);
+    }
+  }
+  @media (max-width: 1200px) {
+    .section-heading {
+      font-size: 3vw; /* Adjust the font size for medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 4vw; /* Adjust the font size for smaller screens */
+    }
+  }
+
