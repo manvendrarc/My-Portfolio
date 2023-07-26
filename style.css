@@ -1,233 +1,345 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 
-
+body{
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #aeaeae);
+}
 #abt .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .col-lg-6,
-  .col-md-6 {
-    flex-basis: 50%;
-    display: flex;
-  align-items: center;
-  }
-  
-  .col {
-    margin-bottom: 2rem;
-  }
-  
-.about-image{
-    position:relative ;
-} 
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.about-image img{
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-    
-} 
-    
+.col-lg-6,
+.col-md-6 {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+
+}
+
 
 .about-me-text p {
-    font-size: 1.2rem; 
-    line-height: 1.6; 
-    text-align: justify;
-  }
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 .about {
-    margin-top: 100px;
+  margin-top: 100px;
 }
-.about-me{
-    margin: auto;
+
+.about-me {
+  margin: auto;
 }
+
 .about-me-text {
-    overflow: hidden;
-    
-      border-right: .15em solid orange;
-      white-space: nowrap;
-      animation: 
-      typing 2s steps(40, end) forwards;
-      max-width: 335px;
+  overflow: hidden;
+
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation:
+    typing 2s steps(40, end) forwards;
+  max-width: 335px;
+}
+/* Skills section */
+#Skills{
+  padding: 2em;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top: 100px;
+}
+
+#skill-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.skills{
+  width:21%;
+  height:70%;
+  text-align: center;
+  padding: 1em;
+  margin: 10px;
+}
+.skills img{
+  object-fit: contain;
+  width: 21%;
+  margin-top: 20px;
+}
+.skill .skill-content{
+  font-size: 1em;
+
+}
+.skills .skill-content p:nth-child(1)
+{
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.skill .skill-content p:nth-child(2)
+{
+  font-size: 1vw;
+}
+/* Adjust icon size on larger screens */
+@media (min-width: 1200px) {
+  .skills img {
+    width: 25%;
   }
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+}
+
+@media (min-width: 1400px) {
+  .skills img {
+    width: 40%;
   }
-.fa-linkedin::before{
-    content: "\f08c";
 }
-#contact-icon {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    
-}
-#contact-icon div a {
-    text-decoration: none;
-    color: gray;
-}
-/* resume button div */
- #resume-butn{
-    
-    position: relative;
-    
-    /* top:50%; */
-    /* width: 9%; */
-    /* left: 2%; */
-   } 
-   #resume-tag{
-       text-decoration: none;
-       color:black ;
-   }
-   #resume-butn button:hover a{
-       color:white;
-   }
-   
-   resume button  */
-   #resume-butn button{
 
-       padding: 4%;
-       margin-left: 1px;
-       letter-spacing: 1px;
-       width:100%;
-       font-size: 1.1vw;
-   }
-    
-
-
-#footer {
-    color: white;
-    background-color: black;
-    font-family: var(--font);
-    padding: 2em;
-    margin-top: 50px;
-}
-#follow{
-
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-#follow-links {
-    padding: 0px 30px;
-    width: 15%;
-    margin-top: 0.5rem;
-    margin-bottom: 3rem;
-    display: flex;
-    
-}
-#copyright{
-   text-align: center;
-   color: gray;
+@media (max-width: 992px) {
+  .skills {
+    width: 45%;
+  }
 }
 
 @media (max-width: 768px) {
-    .about-me-text p {
-      font-size: 1rem; 
-      line-height: 1.5; 
-    }
-    .about-image img {
-      
-      width: auto;
-      
-    }
+  .skills {
+    width: 100%;
+    max-width: 300px;
   }
 
+  .skills img {
+    width: 50%;
+  }
+}
 
-.Education{
-    width: 100%;
-    
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.fa-linkedin::before {
+  content: "\f08c";
+}
+
+#contact-icon {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
 
 }
-.section-heading{
-    
-    font-weight: 600;
-    text-align: center;
-    font-size: 2vw;
+
+#contact-icon div a {
+  text-decoration: none;
+  color: gray;
+}
+
+/* resume button div */
+#resume-butn {
+
+  position: relative;
+
+  /* top:50%; */
+  /* width: 9%; */
+  /* left: 2%; */
+}
+
+#resume-tag {
+  text-decoration: none;
+  color: black;
+}
+
+#resume-butn button:hover a {
+  color: white;
+}
+
+resume button */ #resume-butn button {
+
+  padding: 4%;
+  margin-left: 1px;
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 1.1vw;
+}
+
+
+
+#footer {
+  color: white;
+  background-color: black;
+  font-family: var(--font);
+  padding: 2em;
+  margin-top: 50px;
+}
+
+#follow {
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#follow-links {
+  padding: 0px 30px;
+  width: 15%;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+
+}
+
+#copyright {
+  text-align: center;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .about-me-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about-image img {
+
+    width: auto;
+
+  }
+}
+
+
+.Education {
+  width: 100%;
+
+
+}
+
+.section-heading {
+
+  font-weight: 600;
+  text-align: center;
+  font-size: 2vw;
 
 }
 
 /* education cards */
-#education-cards{
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding:2rem;
+#education-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 .edu-cards {
-    flex: 0 0 calc(20% - 20px);
-    margin-bottom: 20px;
-    background-color: white;
-    box-shadow: 0px 5px 20px 1px;
-    transition: 0.5s transform ease;
-  }
-.edu-cards:hover{
-    transform: scaleX(1.1) scaleY(1.1);
-    
-}
-.edu-cards .card-img{
-    height: 50%;
-    padding-top:7%;
-    
+  flex: 0 0 calc(20% - 20px);
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 20px 1px;
+  transition: 0.5s transform ease;
 }
 
-.edu-cards .card-img img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.edu-cards .card-content{
-    padding: 7%;
-    text-align: center;
-}
-
-.edu-cards .card-content h5{
-    font-size: 1.2em;
-    font-weight: 800;
+.edu-cards:hover {
+  transform: scaleX(1.1) scaleY(1.1);
 
 }
-.edu-cards .card-detail p{
-    margin-bottom: 0.5rem;
+
+.edu-cards .card-img {
+  height: 50%;
+  padding-top: 7%;
+
 }
+
+.edu-cards .card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.edu-cards .card-content {
+  padding: 7%;
+  text-align: center;
+}
+
+.edu-cards .card-content h5 {
+  font-size: 1.2em;
+  font-weight: 800;
+
+}
+
+.edu-cards .card-detail p {
+  margin-bottom: 0.5rem;
+}
+
 .section-heading {
-    font-weight: 600;
-    text-align: center;
-    font-size: 2vw;
-  }
-  
+  font-weight: 600;
+  text-align: center;
+  font-size: 2vw;
+}
+
 /* Responsive styles for education cards */
 @media (max-width: 1200px) {
-    .edu-cards {
-      flex: 0 0 calc(25% - 20px);
-    }
+  .edu-cards {
+    flex: 0 0 calc(25% - 20px);
   }
-  
-  @media (max-width: 992px) {
-    .edu-cards {
-      flex: 0 0 calc(33.3333% - 20px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .edu-cards {
-      flex: 0 0 calc(50% - 20px);
-    }
-  }
-  @media (max-width: 1200px) {
-    .section-heading {
-      font-size: 3vw; /* Adjust the font size for medium-sized screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .section-heading {
-      font-size: 4vw; /* Adjust the font size for smaller screens */
-    }
-  }
+}
 
+@media (max-width: 992px) {
+  .edu-cards {
+    flex: 0 0 calc(33.3333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-cards {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-heading {
+    font-size: 3vw;
+    /* Adjust the font size for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 4vw;
+    /* Adjust the font size for smaller screens */
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1.2s ease;
+
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
